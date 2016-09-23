@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Lukas Wegmann</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+        <h1>Lukas Wegmann</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="hidden-xs hidden-sm" style="height: 250px"></div>
+                <h2><span class="glyphicon glyphicon-grain" aria-hidden="true"></span> Projects</h2>
+
+                <p><a href="http://scala-search.org">Scaps: Scala API-Search</a> Find Scala functions by types and keywords.</p>
+            </div>
+
+            <div class="col-md-4">
+                <div class="hidden-xs hidden-sm" style="height: 50px"></div>
+
+                <h2><span class="glyphicon glyphicon-volume-up" aria-hidden="true"></span> Papers and Talks</h2>
+
+                <p>
+                    <strong>Scaps: Type-Directed API Search for Scala</strong>
+                    <br>2016-10-30 at <a href="http://conf.researchr.org/track/scala-2016/scala-2016">Scala Symposium</a>
+                    <br><a href="scaps/scapsScala16preprint.pdf">Preprint</a> &middot; <a role="button" data-toggle="collapse" href="#scapsScala16" aria-expanded="false" aria-controls="scapsScala16">Abstract...</a>
+                    <div class="collapse" id="scapsScala16">
+                        <p>Type-directed API search, using queries composed of both keywords and type signatures to retrieve definitions from APIs, are popular in the functional programming community. This search technique allows programmers to easily navigate complex and large APIs in order to find the definitions they are interested in. While there exist some effective approaches to address type-directed API search for functional languages, we observed that none of these have been successfully adapted for use with statically-typed, object-oriented languages. The challenge here is incorporating large and unified inheritance hierarchies and the resulting prevalence of subtyping into an API retrieval model. We describe a new approach to API retrieval and provide an implementation thereof for the Scala language. Our evaluation with queries mined from Q&A websites shows that the model retrieves definitions from the Scala standard library with 94% of the relevant results in the top 10.</p>
+                    </div>
+                </p>
+                <p>
+                    <strong>Scaps: Retrieving Values with Types</strong>
+                    <br>2016-02-11 at <a href="http://scalasphere.org/">ScalaSphere</a>
+                    <br><a href="scaps/scalaSphere16.pdf">Slides</a> &middot; <a role="button" data-toggle="collapse" href="#scapsScalaSphere" aria-expanded="false" aria-controls="scapsScalaSphere">Abstract...</a>
+                    <div class="collapse" id="scapsScalaSphere">
+                        <p>Scaps is a search engine for quickly discovering definitions in your Scala project and all its library dependencies. Like Hoogle for Haskell, it especially focuses on type queries that allows to precisely formulate questions like “How to get an X from a Y?”. Scaps incorporates almost all features of Scala’s type system to provide useful answers, including subtyping, higher-order polymorphism and implicit conversions.</p>
+                        <p>In contrast to Haskell, the presence of inheritance hierarchies in Scala pose some surprising treats to either performance or precision of the search engine. This talk highlights some of those pitfalls and shows how they have been addressed in Scaps. Additionally, I want to give an outlook on the future of the project and how it can be adopted to further languages on the JVM.</p>
+                    </div>
+                </p>
+                <p>
+                    <strong>Scaps: Type-Directed API Search for Scala (Master's Thesis)</strong>
+                    <br>2015-08-20 at <a href="http://www.hsr.ch">IFS, HSR</a>
+                    <br><a href="scaps/thesis.pdf">Report</a> &middot; <a role="button" data-toggle="collapse" href="#thesis" aria-expanded="false" aria-controls="thesis">Abstract...</a>
+                    <div class="collapse" id="thesis">
+                        <p>Reusing existing functionality from legacy code and third party programming libraries is often hard, because the vast number of definitions and the complexity of the APIs require a detailed knowledge of the programming environment. To help developers discovering such functionality when working with a statically typed, object-oriented programming language, we designed an API retrieval system that supports querying indexed APIs with textual keywords and type signatures. The feature of the search engine is inspired by a similar tool for the Haskell programming language called Hoogle. Though, we decided to develop another approach to address the API search problem based on traditional information retrieval techniques which, we argue, is better suited for object-oriented languages.</p>
+                        <p>As a proof of concept, we implemented the API retrieval system for the Scala programming language and provided a web-based user interface. Furthermore, we demonstrate how Scala-specific language features like user-defined implicit conversions and implicit parameters can be included into our basic approach. A comparison to a system using only exact matches of partial types of the query shows that the effectiveness of API retrieval can be substantially improved with our approach.</p>
+                    </div>
+                </p>
+                <p>
+                    <strong>Concepts for CDT</strong>
+                    <br>2015-01-31 at <a href="http://www.hsr.ch">IFS, HSR</a>
+                    <br><a href="concepts/ConceptsForCDT.pdf">Report</a> &middot; <a role="button" data-toggle="collapse" href="#conceptsForCdt" aria-expanded="false" aria-controls="conceptsForCdt">Abstract...</a>
+                    <div class="collapse" id="conceptsForCdt">
+                        <p>Concepts is one of the most awaited language constructs of the C++17 standard and is going to simplify the work with templates significantly. The new language feature introduces a way to describe syntactical requirements for template parameters and check template arguments during instantiation. Requirements on template parameters are no longer only implied from their use in the template body. This enables cleaner error messages during compilation and more self-explanatory APIs. But, up to now there is only one working implementation of the current Concepts proposal as part of the GCC C++ compiler and the support in IDEs is non-existent.</p>
+                        <p>During this term project, we have worked on the integration of the Concepts proposal in the Eclipse CDT development environment. We have analyzed the new language features and identified the required changes and extensions to both parser and semantic analysis.</p>
+                        <p>The resulting implementation includes complete support for the new syntax introduced by the proposal. Furthermore, the binding resolution algorithm has been extended such that all names used for constraining template arguments and defining concepts can be correctly resolved and checked for binding errors. This gives basic support for the new language features and enables the further implementa- tion of more advanced features like concept checks in the IDE, constraint-based auto-completion and new refactoring tools.</p>
+                    </div>
+                </p>
+                <p>
+                    <strong>Unobstrusive Refactoring Tools for Code Extraction in Scala</strong>
+                    <br>2014-01-27 at <a href="http://www.hsr.ch">IFS, HSR</a>
+                    <br><a href="scalaRefactoring/UnobtrusiveRefactoringToolsForCodeExtractionInScala.pdf">Report</a> &middot; <a role="button" data-toggle="collapse" href="#refactoring" aria-expanded="false" aria-controls="refactoring">Abstract...</a>
+                    <div class="collapse" id="refactoring">
+                        <p>While the support for automated refactoring for the Scala programming language increased steadily over the last few years, it is still not as elaborated as the tools available for other statically typed languages like Java or C#. The few refactoring tools provided by major Scala IDEs are heavily influenced by their Java equivalents and are not particularly tailored to the lightweight and expressive nature of Scala.</p>
+                        <p>This project provides a set of new refactoring tools for code extraction that offer lightweight invocation methods and require minimal user interactions while still remaining flexible. The source transformation logic of the new tools has been implemented as a part of the Scala Refactoring library and is also integrated in the Scala IDE for Eclipse.</p>
+                        <p>The new tools support the refactoring techniques Extract Method, Extract Value, Extract Parameter and a new refactoring called Extract Extractor that allows to create abstractions of patterns via Scala’s extractor syntax.</p>
+                    </div>
+                </p>
+            </div>
+
+            <div class="col-md-4">
+                <div class="hidden-xs hidden-sm" style="height: 150px"></div>
+
+                <h2><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Contact</h2>
+
+                <p><strong>Twitter</strong> <a href="https://twitter.com/Luegg1">@Luegg1</a></li></p>
+                <p><strong>GitHub</strong> <a href="https://github.com/Luegg">@Luegg</a></li></p>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha256-/SIrNqv8h6QGKDuNoLGA4iret+kyesCkHGzVUUV0shc=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  </body>
+</html>
